@@ -36,7 +36,7 @@ Following procedures are taken from https://qiita.com/yosmoc/items/2e1d779e806a7
 4.1. create a user group called `uinput`:
 ```
 sudo groupadd uinput
-sudo useradd -G input,uinput `whoami`
+sudo usermod -a -G input,uinput `whoami`
 ```
 
 4.2. create following files:
