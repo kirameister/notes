@@ -89,6 +89,55 @@ systemctl --user start xkeysnail
 systemctl --user status xkeysnail
 ```
 
+4.6. My xkeysnail config.py (stored as `$HOME/.config/xkeysnail/config.py`):
+```
+# -*- coding: utf-8 -*-
+
+import re
+from xkeysnail.transform import *
+
+# define timeout for multipurpose_modmap
+define_timeout(1)
+
+# [Global modemap] Change modifier keys as in xmodmap
+define_modmap({
+    Key.CAPSLOCK: Key.LEFT_CTRL,
+    Key.RIGHT_ALT: Key.MUHENKAN
+})
+
+# Emacs-like keybindings in non-Emacs applications
+define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt", "Gnome-terminal"), {
+    # Cursor
+    K("C-b"): with_mark(K("left")),
+    K("C-f"): with_mark(K("right")),
+    K("C-p"): with_mark(K("up")),
+    K("C-n"): with_mark(K("down")),
+    K("C-h"): with_mark(K("backspace")),
+    # Beginning/End of line
+    K("C-a"): with_mark(K("home")),
+    K("C-e"): with_mark(K("end")),
+    # Newline
+    K("C-m"): K("enter"),
+    K("C-j"): K("enter"),
+    K("C-o"): [K("enter"), K("left")],
+    # Delete
+    K("C-d"): [K("delete"), set_mark(False)],
+    K("C-g"): K("C-BACKSPACE"),
+    # Kill line
+    K("C-k"): [K("Shift-end"), K("C-x"), set_mark(False)],
+}, "Emacs-like keys")
+
+define_keymap(re.compile(".*"), {
+    K("T"): K("K"),
+    K("K"): K("E"),
+    K("E"): K("D"),
+    K("D"): K("T"),
+}, "Minimak-4")
+```
+
+5. Japanese IME settings
+
+I do need to sometimes type in Japanese. So the dollowing 
 
 
 
