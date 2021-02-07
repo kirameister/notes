@@ -132,13 +132,19 @@ define_keymap(re.compile(".*"), {
     K("K"): K("E"),
     K("E"): K("D"),
     K("D"): K("T"),
+    K("Shift-T"): K("Shift-K"),
+    K("Shift-K"): K("Shift-E"),
+    K("Shift-E"): K("Shift-D"),
+    K("Shift-D"): K("Shift-T"),
 }, "Minimak-4")
+
 ```
 
 5. Japanese IME settings
 
 I do need to sometimes type in Japanese. So the dollowing 
 
+https://kinakoankon.net/ubuntu-20-04-japanese-input-ibus-fcitx-mozc/
 
 
 
