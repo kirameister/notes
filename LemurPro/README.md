@@ -26,6 +26,9 @@ Following software have been installed (not exclusive):
 - ripgrep
 - git
 
+4. Firefox
+open about:config and set `browser.backspace_action` to `0`.
+
 4. xkeysnail
 ```
 sudo pip3 install xkeysnail
