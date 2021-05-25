@@ -105,7 +105,10 @@ define_timeout(1)
 # [Global modemap] Change modifier keys as in xmodmap
 define_modmap({
     Key.CAPSLOCK: Key.LEFT_CTRL,
-    Key.RIGHT_ALT: Key.MUHENKAN
+})
+
+define_multipurpose_modmap({
+    Key.RIGHT_ALT: [Key.MUHENKAN, Key.RIGHT_ALT],
 })
 
 # Emacs-like keybindings in non-Emacs applications
