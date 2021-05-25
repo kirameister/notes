@@ -26,9 +26,6 @@ Following software have been installed (not exclusive):
 - ripgrep
 - git
 
-4. Firefox
-open about:config and set `browser.backspace_action` to `0`.
-
 4. xkeysnail
 ```
 sudo pip3 install xkeysnail
@@ -153,6 +150,9 @@ I do need to sometimes type in Japanese. So the dollowing
 https://kinakoankon.net/ubuntu-20-04-japanese-input-ibus-fcitx-mozc/
 
 
+
+6. Firefox
+open about:config and set `browser.backspace_action` to `0`.
 
 
 
