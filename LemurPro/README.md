@@ -25,6 +25,7 @@ Following software have been installed (not exclusive):
 - vim
 - ripgrep
 - git
+- protobuf-compiler
 
 4. xkeysnail
 ```
@@ -89,7 +90,8 @@ systemctl --user start xkeysnail
 systemctl --user status xkeysnail
 ```
 
-4.6. My xkeysnail config.py (stored as `$HOME/.config/xkeysnail/config.py`):
+4.6. Example xkeysnail config.py (to be stored as `$HOME/.config/xkeysnail/config.py`) shown below. Please have a look at xkeymacs_config.py for the latest version.
+
 ```
 # -*- coding: utf-8 -*-
 
@@ -129,18 +131,6 @@ define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt", "Gnome-termina
     # Kill line
     K("C-k"): [K("Shift-end"), K("C-x"), set_mark(False)],
 }, "Emacs-like keys")
-
-define_keymap(re.compile(".*"), {
-    K("T"): K("K"),
-    K("K"): K("E"),
-    K("E"): K("D"),
-    K("D"): K("T"),
-    K("Shift-T"): K("Shift-K"),
-    K("Shift-K"): K("Shift-E"),
-    K("Shift-E"): K("Shift-D"),
-    K("Shift-D"): K("Shift-T"),
-}, "Minimak-4")
-
 ```
 
 5. Japanese IME settings
@@ -149,6 +139,26 @@ I do need to sometimes type in Japanese. So the dollowing
 
 https://kinakoankon.net/ubuntu-20-04-japanese-input-ibus-fcitx-mozc/
 
+I personally use 新下駄配列 by mozc, which is a Japanese IME. In order to use the 新下駄配列, one needs to (currently) build the latest (version equal or later than 2.26.4450) mozc locally. On top of that, one would need to update the `config1.db`, stored in binary format, in order to configure the 新下駄配列 correctly: 
+
+```
+cat $HOME/.mozc/config1.db | protoc --proto_path=mozc/src/protocol --decode "mozc.config.Config" mozc/src/protocol/config.proto > $HOME/.mozc/config1.txt
+## modify $HOME/.mozc/config1.txt
+cat $HOME/.mozc/config1.txt | protoc --proto_path=mozc/src/protocol --encode "mozc.config.Config" mozc/src/protocol/config.proto > $HOME/.mozc/config1.db
+```
+
+Please note that `protoc` command is provided as part of `protobuf-compiler` package in the Debian-based operating systems (including `Ubuntu` and `Pop!_OS`). 
+
+Modyfing the `$HOME/.mozc/config1.txt` could be done as following: 
+
+```
+cat $HOME/.mozc/config1.txt | perl -pe 's/^(custom_roman_table: ".*)"$/$1{!}\t\t\tNoTransliteration\n"/' > $HOME/.mozc/config1.txt
+echo 'composing_timeout_threshold_msec: 80' >> $HOME/.mozc/config1.txt
+```
+
+The number `80` in the second command corresponds to the threshold in milliseconds to identify the simultaneous key-strokes. 
+
+As indicated in the Xkeysnail config above, I've set binding from R_ALT to MUHENKAN key. This is to toggle direct input mode and Hiragana input mode by MUHENKAN, which doesn't exist in ANSI US physical keyboard layout. Such settings could be configured by `mozc icon -> Tools -> Properties` and clicking `Keymap Style Customize..`, and is stored within `config1.db`. 
 
 
 6. Firefox
