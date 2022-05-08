@@ -40,6 +40,16 @@ define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt", "Gnome-termina
 }, "Emacs-like keys")
 
 
+define_keymap(lambda wm_class: wm_class in ("URxvt", "Terminator", "Terminal", "Gnome-terminal"), {
+    K("C-g"): K("C-w"),
+    K("C-w"): K("C-g"),
+}, "terminal key-swaps")
+
+define_keymap(lambda wm_class: wm_class in ("Firefox", "firefox"), {
+    K("C-s"): K("C-f"),
+}, "browser s for search-find")
+
+
 define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt", "Terminator", "Terminal", "Gnome-terminal"), {
     # multiple strokes to enter umlauts and es-zett in/for German
     K("C-M-u"): {
