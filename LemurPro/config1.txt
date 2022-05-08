@@ -1,0 +1,111 @@
+general_config {
+  config_version: 1
+  last_modified_product_version: "2.26.4656.102"
+  last_modified_time: 1651790345
+  platform: "Linux"
+}
+verbose_level: 0
+incognito_mode: false
+check_default: true
+presentation_mode: false
+preedit_method: ROMAN
+session_keymap: CUSTOM
+custom_keymap_table: "status\tkey\tcommand\nPrecomposition\tBackspace\tRevert\nConversion\tBackspace\tCancel\nComposition\tBackspace\tBackspace\nComposition\tCtrl ;\tDisplayAsHalfWidth\nConversion\tCtrl ;\tDisplayAsHalfWidth\nComposition\tCtrl :\tDisplayAsHalfAlphanumeric\nConversion\tCtrl :\tDisplayAsHalfAlphanumeric\nComposition\tCtrl \'\tDisplayAsHalfAlphanumeric\nConversion\tCtrl \'\tDisplayAsHalfAlphanumeric\nConversion\tCtrl a\tSegmentFocusFirst\nComposition\tCtrl a\tMoveCursorToBeginning\nConversion\tCtrl b\tSegmentFocusLeft\nComposition\tCtrl b\tMoveCursorLeft\nPrecomposition\tCtrl Backspace\tUndo\nConversion\tCtrl d\tSegmentFocusRight\nComposition\tCtrl d\tDelete\nPrediction\tCtrl Delete\tDeleteSelectedCandidate\nConversion\tCtrl e\tConvertPrev\nComposition\tCtrl e\tMoveCursorToEnd\nConversion\tCtrl f\tSegmentFocusRight\nComposition\tCtrl f\tMoveCursorRight\nComposition\tCtrl g\tCancel\nConversion\tCtrl h\tCancel\nComposition\tCtrl h\tBackspace\nConversion\tCtrl i\tSegmentWidthShrink\nComposition\tCtrl j\tDisplayAsHiragana\nConversion\tCtrl j\tDisplayAsHiragana\nComposition\tCtrl k\tDisplayAsFullKatakana\nConversion\tCtrl k\tDisplayAsFullKatakana\nComposition\tCtrl l\tDisplayAsFullAlphanumeric\nConversion\tCtrl l\tDisplayAsFullAlphanumeric\nConversion\tCtrl Left\tSegmentFocusFirst\nComposition\tCtrl Left\tMoveCursorToBeginning\nComposition\tCtrl m\tCommit\nComposition\tCtrl m\tCommit\nConversion\tCtrl m\tCommit\nConversion\tCtrl n\tConvertNext\nSuggestion\tCtrl n\tPredictAndConvert\nConversion\tCtrl o\tSegmentWidthExpand\nConversion\tCtrl p\tConvertPrev\nConversion\tCtrl q\tSegmentWidthShrink\nConversion\tCtrl Right\tSegmentFocusLast\nComposition\tCtrl Right\tMoveCursorToEnd\nConversion\tCtrl s\tSegmentFocusLeft\nDirectInput\tCtrl Shift r\tReconvert\nPrecomposition\tCtrl Shift r\tReconvert\nConversion\tCtrl w\tSegmentWidthExpand\nConversion\tCtrl x\tConvertNext\nComposition\tDelete\tDelete\nConversion\tDown\tConvertNext\nSuggestion\tDown\tPredictAndConvert\nComposition\tEisu\tToggleAlphanumericMode\nPrecomposition\tEisu\tToggleAlphanumericMode\nConversion\tEnd\tSegmentFocusLast\nComposition\tEnd\tMoveCursorToEnd\nComposition\tEnter\tCommit\nConversion\tEnter\tCommit\nComposition\tESC\tCancel\nConversion\tESC\tCancel\nComposition\tF10\tDisplayAsHalfAlphanumeric\nConversion\tF10\tDisplayAsHalfAlphanumeric\nComposition\tF2\tConvertWithoutHistory\nComposition\tF6\tDisplayAsHiragana\nConversion\tF6\tDisplayAsHiragana\nComposition\tF7\tDisplayAsFullKatakana\nConversion\tF7\tDisplayAsFullKatakana\nComposition\tF8\tDisplayAsHalfWidth\nConversion\tF8\tDisplayAsHalfWidth\nComposition\tF9\tDisplayAsFullAlphanumeric\nConversion\tF9\tDisplayAsFullAlphanumeric\nConversion\tHome\tSegmentFocusFirst\nComposition\tHome\tMoveCursorToBeginning\nConversion\tLeft\tSegmentFocusLeft\nComposition\tLeft\tMoveCursorLeft\nComposition\tMuhenkan\tIMEOff\nConversion\tMuhenkan\tIMEOff\nPrecomposition\tMuhenkan\tIMEOff\nDirectInput\tMuhenkan\tIMEOn\nComposition\tOption a\tDisplayAsHalfWidth\nConversion\tOption a\tDisplayAsHalfWidth\nComposition\tOption c\tDisplayAsFullAlphanumeric\nConversion\tOption c\tDisplayAsFullAlphanumeric\nComposition\tOption F1\tDisplayAsHiragana\nConversion\tOption F1\tDisplayAsHiragana\nComposition\tOption F2\tDisplayAsFullKatakana\nConversion\tOption F2\tDisplayAsFullKatakana\nComposition\tOption F3\tDisplayAsFullAlphanumeric\nConversion\tOption F3\tDisplayAsFullAlphanumeric\nComposition\tOption F4\tDisplayAsHalfWidth\nConversion\tOption F4\tDisplayAsHalfWidth\nComposition\tOption F5\tDisplayAsHalfAlphanumeric\nConversion\tOption F5\tDisplayAsHalfAlphanumeric\nConversion\tOption i\tConvertPrev\nComposition\tOption j\tMoveCursorLeft\nConversion\tOption k\tConvertNext\nComposition\tOption l\tMoveCursorRight\nComposition\tOption s\tDisplayAsHalfAlphanumeric\nConversion\tOption s\tDisplayAsHalfAlphanumeric\nComposition\tOption Space\tInsertFullSpace\nComposition\tOption x\tDisplayAsFullKatakana\nConversion\tOption x\tDisplayAsFullKatakana\nComposition\tOption z\tDisplayAsHiragana\nConversion\tOption z\tDisplayAsHiragana\nConversion\tPageDown\tConvertNextPage\nConversion\tPageUp\tConvertPrevPage\nConversion\tRight\tSegmentFocusRight\nComposition\tRight\tMoveCursorRight\nConversion\tShift Down\tConvertNextPage\nSuggestion\tShift Enter\tCommitFirstSuggestion\nConversion\tShift Left\tSegmentWidthShrink\nConversion\tShift Right\tSegmentWidthExpand\nConversion\tShift Space\tConvertPrev\nPrecomposition\tShift Space\tInsertAlternateSpace\nConversion\tShift Tab\tConvertPrev\nConversion\tShift Up\tConvertPrevPage\nConversion\tSpace\tConvertNext\nPrecomposition\tSpace\tInsertSpace\nComposition\tSpace\tConvert\nComposition\tTab\tPredictAndConvert\nConversion\tTab\tPredictAndConvert\nConversion\tUp\tConvertPrev\nConversion\tVirtualEnter\tCommitOnlyFirstSegment\nComposition\tVirtualEnter\tCommit\nConversion\tVirtualLeft\tSegmentWidthShrink\nComposition\tVirtualLeft\tMoveCursorLeft\nComposition\tVirtualRight\tMoveCursorRight\nConversion\tVirtualRight\tSegmentWidthExpand\nComposition\tKanji\tIMEOff\nComposition\tOFF\tIMEOff\nComposition\tON\tIMEOn\nConversion\tF1\tReportBug\nConversion\tF3\tReportBug\nConversion\tKanji\tIMEOff\nConversion\tOFF\tIMEOff\nConversion\tON\tIMEOn\nDirectInput\tKanji\tIMEOn\nDirectInput\tON\tIMEOn\nPrecomposition\tKanji\tIMEOff\nPrecomposition\tOFF\tIMEOff\nPrecomposition\tON\tIMEOn\n"
+custom_roman_table: "q\t\t\343\203\274\n\343\203\274{!}\t\343\203\274\nw\t\t\343\201\253\n\343\201\253{!}\t\343\201\253\ne\t\t\343\201\257\n\343\201\257{!}\t\343\201\257\nr\t\t\343\200\201\n\343\200\201{!}\t\343\200\201\nt\t\t\343\201\241\n\343\201\241{!}\t\343\201\241\ny\t\t\343\201\220\n\343\201\220{!}\t\343\201\220\nu\t\t\343\201\260\n\343\201\260{!}\t\343\201\260\ni\t\t\343\201\223\n\343\201\223{!}\t\343\201\223\no\t\t\343\201\214\n\343\201\214{!}\t\343\201\214\np\t\t\343\201\262\n\343\201\262{!}\t\343\201\262\na\t\t\343\201\256\n\343\201\256{!}\t\343\201\256\ns\t\t\343\201\250\n\343\201\250{!}\t\343\201\250\nd\t\t\343\201\213\n\343\201\213{!}\t\343\201\213\nf\t\t\343\202\223\n\343\202\223{!}\t\343\202\223\ng\t\t\343\201\243\n\343\201\243{!}\t\343\201\243\nh\t\t\343\201\217\n\343\201\217{!}\t\343\201\217\nj\t\t\343\201\206\n\343\201\206{!}\t\343\201\206\nk\t\t\343\201\204\n\343\201\204{!}\t\343\201\204\nl\t\t\343\201\227\n\343\201\227{!}\t\343\201\227\n;\t\t\343\201\252\n\343\201\252{!}\t\343\201\252\nz\t\t\343\201\231\n\343\201\231{!}\t\343\201\231\nx\t\t\343\201\276\n\343\201\276{!}\t\343\201\276\nc\t\t\343\201\215\n\343\201\215{!}\t\343\201\215\nv\t\t\343\202\213\n\343\202\213{!}\t\343\202\213\nb\t\t\343\201\244\n\343\201\244{!}\t\343\201\244\nn\t\t\343\201\246\n\343\201\246{!}\t\343\201\246\nm\t\t\343\201\237\n\343\201\237{!}\t\343\201\237\n,\t\t\343\201\247\n\343\201\247{!}\t\343\201\247\n.\t\t\343\200\202\n\343\200\202{!}\t\343\200\202\n/\t\t\343\201\266\n\343\201\266{!}\t\343\201\266\n\343\201\213k\t\343\202\214\n\343\201\204d\t\343\202\214\n\343\201\213y\t\343\201\206\343\201\203\n\343\201\220d\t\343\201\206\343\201\203\n\343\201\213u\t\343\201\261\n\343\201\260d\t\343\201\261\n\343\201\213i\t\343\202\210\n\343\201\223d\t\343\202\210\n\343\201\213o\t\343\201\277\n\343\201\214d\t\343\201\277\n\343\201\213p\t\343\201\206\343\201\207\n\343\201\262d\t\343\201\206\343\201\207\n\343\201\213h\t\343\201\270\n\343\201\217d\t\343\201\270\n\343\201\213j\t\343\201\202\n\343\201\206d\t\343\201\202\n\343\201\213l\t\343\201\212\n\343\201\227d\t\343\201\212\n\343\201\213;\t\343\201\210\n\343\201\252d\t\343\201\210\n\343\201\213n\t\343\201\233\n\343\201\246d\t\343\201\233\n\343\201\213m\t\343\201\255\n\343\201\237d\t\343\201\255\n\343\201\213,\t\343\201\271\n\343\201\247d\t\343\201\271\n\343\201\213.\t\343\201\267\n\343\200\202d\t\343\201\267\n\343\201\213/\t\343\202\224\n\343\201\266d\t\343\202\224\n\343\201\204q\t\343\201\265\343\201\201\n\343\203\274k\t\343\201\265\343\201\201\n\343\201\204w\t\343\201\224\n\343\201\253k\t\343\201\224\n\343\201\204e\t\343\201\265\n\343\201\257k\t\343\201\265\n\343\201\204r\t\343\201\265\343\201\203\n\343\200\201k\t\343\201\265\343\201\203\n\343\201\204t\t\343\201\265\343\201\207\n\343\201\241k\t\343\201\265\343\201\207\n\343\201\204a\t\343\201\273\n\343\201\256k\t\343\201\273\n\343\201\204s\t\343\201\230\n\343\201\250k\t\343\201\230\n\343\201\204f\t\343\202\202\n\343\202\223k\t\343\202\202\n\343\201\204g\t\343\202\206\n\343\201\243k\t\343\202\206\n\343\201\204z\t\343\201\245\n\343\201\231k\t\343\201\245\n\343\201\204x\t\343\201\236\n\343\201\276k\t\343\201\236\n\343\201\204c\t\343\201\274\n\343\201\215k\t\343\201\274\n\343\201\204v\t\343\202\200\n\343\202\213k\t\343\202\200\n\343\201\204b\t\343\201\265\343\201\211\n\343\201\244k\t\343\201\265\343\201\211\n\343\201\2041\t\343\201\201\n\343\201\2042\t\343\201\203\n\343\201\2043\t\343\201\205\n\343\201\2044\t\343\201\207\n\343\201\2045\t\343\201\211\n\343\201\250l\t\343\201\225\n\343\201\227s\t\343\201\225\n\343\201\250y\t\343\201\227\343\201\207\n\343\201\220s\t\343\201\227\343\201\207\n\343\201\250u\t\343\201\272\n\343\201\260s\t\343\201\272\n\343\201\250i\t\343\201\251\n\343\201\223s\t\343\201\251\n\343\201\250o\t\343\202\204\n\343\201\214s\t\343\202\204\n\343\201\250p\t\343\201\230\343\201\207\n\343\201\262s\t\343\201\230\343\201\207\n\343\201\250h\t\343\201\263\n\343\201\217s\t\343\201\263\n\343\201\250j\t\343\202\211\n\343\201\206s\t\343\202\211\n\343\201\250;\t\343\201\235\n\343\201\252s\t\343\201\235\n\343\201\250n\t\343\202\217\n\343\201\246s\t\343\202\217\n\343\201\250m\t\343\201\240\n\343\201\237s\t\343\201\240\n\343\201\250,\t\343\201\264\n\343\201\247s\t\343\201\264\n\343\201\250.\t\343\201\275\n\343\200\202s\t\343\201\275\n\343\201\250/\t\343\201\241\343\201\207\n\343\201\266s\t\343\201\241\343\201\207\n\343\201\227q\t\343\201\242\n\343\203\274l\t\343\201\242\n\343\201\227w\t\343\202\201\n\343\201\253l\t\343\202\201\n\343\201\227e\t\343\201\221\n\343\201\257l\t\343\201\221\n\343\201\227r\t\343\201\246\343\201\203\n\343\200\201l\t\343\201\246\343\201\203\n\343\201\227t\t\343\201\247\343\201\203\n\343\201\241l\t\343\201\247\343\201\203\n\343\201\227a\t\343\202\222\n\343\201\256l\t\343\202\222\n\343\201\227f\t\343\202\212\n\343\202\223l\t\343\202\212\n\343\201\227g\t\343\201\232\n\343\201\243l\t\343\201\232\n\343\201\227z\t\343\201\234\n\343\201\231l\t\343\201\234\n\343\201\227x\t\343\201\226\n\343\201\276l\t\343\201\226\n\343\201\227c\t\343\201\216\n\343\201\215l\t\343\201\216\n\343\201\227v\t\343\202\215\n\343\202\213l\t\343\202\215\n\343\201\227b\t\343\201\254\n\343\201\244l\t\343\201\254\n\343\201\2271\t\343\202\203\n\343\201\2272\t\343\201\277\343\202\203\n\343\201\2273\t\343\201\277\343\202\205\n\343\201\2274\t\343\201\277\343\202\207\n\343\201\2275\t\343\202\216\n\343\201\223q\t\343\201\262\343\202\205\n\343\203\274i\t\343\201\262\343\202\205\n\343\201\223w\t\343\201\227\343\202\205\n\343\201\253i\t\343\201\227\343\202\205\n\343\201\223e\t\343\201\227\343\202\207\n\343\201\257i\t\343\201\227\343\202\207\n\343\201\223r\t\343\201\215\343\202\205\n\343\200\201i\t\343\201\215\343\202\205\n\343\201\223t\t\343\201\241\343\202\205\n\343\201\241i\t\343\201\241\343\202\205\n\343\201\223a\t\343\201\262\343\202\207\n\343\201\256i\t\343\201\262\343\202\207\n\343\201\223f\t\343\201\215\343\202\207\n\343\202\223i\t\343\201\215\343\202\207\n\343\201\223g\t\343\201\241\343\202\207\n\343\201\243i\t\343\201\241\343\202\207\n\343\201\223z\t\343\201\262\343\202\203\n\343\201\231i\t\343\201\262\343\202\203\n\343\201\223c\t\343\201\227\343\202\203\n\343\201\215i\t\343\201\227\343\202\203\n\343\201\223v\t\343\201\215\343\202\203\n\343\202\213i\t\343\201\215\343\202\203\n\343\201\223b\t\343\201\241\343\202\203\n\343\201\244i\t\343\201\241\343\202\203\n\343\201\2231\t\343\202\205\n\343\201\2232\t\343\201\263\343\202\203\n\343\201\2233\t\343\201\263\343\202\205\n\343\201\2234\t\343\201\263\343\202\207\n\343\201\214q\t\343\202\212\343\202\205\n\343\203\274o\t\343\202\212\343\202\205\n\343\201\214w\t\343\201\230\343\202\205\n\343\201\253o\t\343\201\230\343\202\205\n\343\201\214e\t\343\201\230\343\202\207\n\343\201\257o\t\343\201\230\343\202\207\n\343\201\214r\t\343\201\216\343\202\205\n\343\200\201o\t\343\201\216\343\202\205\n\343\201\214t\t\343\201\253\343\202\205\n\343\201\241o\t\343\201\253\343\202\205\n\343\201\214a\t\343\202\212\343\202\207\n\343\201\256o\t\343\202\212\343\202\207\n\343\201\214f\t\343\201\216\343\202\207\n\343\202\223o\t\343\201\216\343\202\207\n\343\201\214g\t\343\201\253\343\202\207\n\343\201\243o\t\343\201\253\343\202\207\n\343\201\214z\t\343\202\212\343\202\203\n\343\201\231o\t\343\202\212\343\202\203\n\343\201\214c\t\343\201\230\343\202\203\n\343\201\215o\t\343\201\230\343\202\203\n\343\201\214v\t\343\201\216\343\202\203\n\343\202\213o\t\343\201\216\343\202\203\n\343\201\214b\t\343\201\253\343\202\203\n\343\201\244o\t\343\201\253\343\202\203\n\343\201\2141\t\343\202\207\n\343\201\2142\t\343\201\264\343\202\203\n\343\201\2143\t\343\201\264\343\202\205\n\343\201\2144\t\343\201\264\343\202\207\n\343\201\214p\t\343\201\222\n\343\201\262o\t\343\201\222\n\343\201\223p\t\343\201\206\343\201\211\n\343\201\262i\t\343\201\206\343\201\211\n\343\201\260h\t/\n\343\201\217u\t/\n\343\201\217j\t()\n\343\201\206h\t()\n\343\201\206n\t?\n\343\201\246j\t?\n\343\200\201f\t\343\203\273\n\343\202\223r\t\343\203\273\n\343\200\201g\t\343\203\273\n\343\201\243r\t\343\203\273\n\343\202\223g\t\343\200\214\343\200\215\n\343\201\243f\t\343\200\214\343\200\215\n\343\202\223b\t!\n\343\201\244f\t!\n\343\202\223v\t!\n\343\202\213f\t!\n\343\201\231.\t\342\200\246\n\343\200\202z\t\342\200\246\n\343\201\231h\t\342\206\220\n\343\201\217z\t\342\206\220\n\343\201\231j\t\342\206\223\n\343\201\206z\t\342\206\223\n\343\201\231n\t\342\206\221\n\343\201\246z\t\342\206\221\n\343\201\231m\t\342\206\222\n\343\201\237z\t\342\206\222\n{!}\t\t\tNoTransliteration\n"
+punctuation_method: KUTEN_TOUTEN
+symbol_method: CORNER_BRACKET_MIDDLE_DOT
+space_character_form: FUNDAMENTAL_HALF_WIDTH
+use_keyboard_to_change_preedit_method: false
+history_learning_level: DEFAULT_HISTORY
+selection_shortcut: SHORTCUT_123456789
+character_form_rules {
+  group: "\343\202\242"
+  preedit_character_form: FULL_WIDTH
+  conversion_character_form: FULL_WIDTH
+}
+character_form_rules {
+  group: "A"
+  preedit_character_form: HALF_WIDTH
+  conversion_character_form: LAST_FORM
+}
+character_form_rules {
+  group: "0"
+  preedit_character_form: HALF_WIDTH
+  conversion_character_form: LAST_FORM
+}
+character_form_rules {
+  group: "(){}[]"
+  preedit_character_form: HALF_WIDTH
+  conversion_character_form: LAST_FORM
+}
+character_form_rules {
+  group: ".,"
+  preedit_character_form: FULL_WIDTH
+  conversion_character_form: LAST_FORM
+}
+character_form_rules {
+  group: "\343\200\202\343\200\201"
+  preedit_character_form: FULL_WIDTH
+  conversion_character_form: FULL_WIDTH
+}
+character_form_rules {
+  group: "\343\203\273\343\200\214\343\200\215"
+  preedit_character_form: FULL_WIDTH
+  conversion_character_form: FULL_WIDTH
+}
+character_form_rules {
+  group: "\"\'"
+  preedit_character_form: HALF_WIDTH
+  conversion_character_form: LAST_FORM
+}
+character_form_rules {
+  group: ":;"
+  preedit_character_form: HALF_WIDTH
+  conversion_character_form: LAST_FORM
+}
+character_form_rules {
+  group: "#%&@$^_|`\\"
+  preedit_character_form: HALF_WIDTH
+  conversion_character_form: LAST_FORM
+}
+character_form_rules {
+  group: "~"
+  preedit_character_form: HALF_WIDTH
+  conversion_character_form: LAST_FORM
+}
+character_form_rules {
+  group: "<>=+-/*"
+  preedit_character_form: HALF_WIDTH
+  conversion_character_form: LAST_FORM
+}
+character_form_rules {
+  group: "?!"
+  preedit_character_form: HALF_WIDTH
+  conversion_character_form: LAST_FORM
+}
+use_auto_ime_turn_off: true
+shift_key_mode_switch: ASCII_INPUT_MODE
+numpad_character_form: NUMPAD_HALF_WIDTH
+use_auto_conversion: false
+auto_conversion_key: 13
+yen_sign_character: YEN_SIGN
+use_japanese_layout: false
+use_date_conversion: true
+use_single_kanji_conversion: true
+use_symbol_conversion: true
+use_number_conversion: true
+use_emoticon_conversion: true
+use_calculator: true
+use_t13n_conversion: true
+use_zip_code_conversion: true
+use_spelling_correction: true
+use_emoji_conversion: false
+information_list_config {
+  use_local_usage_dictionary: true
+}
+use_history_suggest: true
+use_dictionary_suggest: true
+use_realtime_conversion: true
+suggestions_size: 3
+use_mode_indicator: true
+composing_timeout_threshold_msec: 80
