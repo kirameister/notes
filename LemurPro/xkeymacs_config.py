@@ -47,6 +47,8 @@ define_keymap(lambda wm_class: wm_class in ("URxvt", "Terminator", "Terminal", "
 
 define_keymap(lambda wm_class: wm_class in ("Firefox", "firefox"), {
     K("C-s"): K("C-f"),
+    K("C-Shift-g"): K("C-g"), # forward-search with additional Shift
+    K("C-Shift-f"): K("C-Shift-g"), # backward-search
 }, "browser s for search-find")
 
 
