@@ -18,7 +18,7 @@ define_multipurpose_modmap({
 })
 
 # Emacs-like keybindings in non-Emacs applications
-define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt", "Gnome-terminal"), {
+define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt", "Gnome-terminal", "VirtualBox Machine", "mGBA"), {
     # Cursor
     K("C-b"): with_mark(K("left")),
     K("C-f"): with_mark(K("right")),
@@ -40,12 +40,12 @@ define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt", "Gnome-termina
 }, "Emacs-like keys")
 
 
-define_keymap(lambda wm_class: wm_class in ("URxvt", "Terminator", "Terminal", "Gnome-terminal"), {
+define_keymap(lambda wm_class: wm_class in ("URxvt", "Terminator", "Terminal", "Gnome-terminal", "VirtualBox Machine"), {
     K("C-g"): K("C-w"),
     K("C-w"): K("C-g"),
 }, "terminal key-swaps")
 
-define_keymap(lambda wm_class: wm_class in ("Firefox", "firefox"), {
+define_keymap(lambda wm_class: wm_class in ("Firefox", "firefox", "Brave-browser", "Chromium-browser"), {
     K("C-s"): K("C-f"),
     K("C-Shift-g"): K("C-g"), # forward-search with additional Shift
     K("C-Shift-f"): K("C-Shift-g"), # backward-search
