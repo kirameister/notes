@@ -56,8 +56,11 @@ require('lazy').setup({
     },
 
     -- color schemes
-    'rebelot/kanagawa.nvim',
-    'folke/tokyonight.nvim',
+    --'rebelot/kanagawa.nvim',
+    --'folke/tokyonight.nvim',
+    { -- Highlight the chunk on cursor
+      'RRethy/vim-illuminate',
+    },
 
     -- Git related plugins
     'tpope/vim-fugitive',
@@ -152,12 +155,12 @@ require('lazy').setup({
       },
     },
 
-    --{ -- Autocompletion
-    --  'hrsh7th/nvim-cmp',
-    --  dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
-    --},
-    --'hrsh7th/cmp-path',
-    --'hrsh7th/cmp-buffer',
+    { -- Autocompletion
+      'hrsh7th/nvim-cmp',
+      dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+    },
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-buffer',
     --'hrsh7th/cmp-cmdline',
 
     -- Useful plugin to show you pending keybinds.
@@ -200,7 +203,7 @@ require('lazy').setup({
 -- Make line numbers default
 vim.wo.number = true
 vim.wo.relativenumber = true
--- Enable mouse mode
+-- Only partially enable mouse mode
 vim.o.mouse = ''
 
 -- Sync clipboard between OS and Neovim.
@@ -372,7 +375,6 @@ local on_attach = function(_, bufnr)
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
   nmap('<C-s>', vim.lsp.buf.signature_help, 'Signature Documentation')
-
 end
 
 -- Enable the following language servers
@@ -398,8 +400,8 @@ local servers = {
 require('neodev').setup()
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
---local capabilities = vim.lsp.protocol.make_client_capabilities()
---capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Setup mason so it can manage external tooling
 require('mason').setup()
@@ -424,12 +426,11 @@ mason_lspconfig.setup_handlers {
 
 
 -- nvim-cmp setup
---local cmp = require 'cmp'
---local luasnip = require 'luasnip'
+local cmp = require 'cmp'
+local luasnip = require 'luasnip'
 
---luasnip.config.setup {}
+luasnip.config.setup {}
 
---[[
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -439,7 +440,7 @@ cmp.setup {
   mapping = cmp.mapping.preset.insert {
     --['<C-d>'] = cmp.mapping.scroll_docs(-4),
     --['<C-f>'] = cmp.mapping.scroll_docs(4),
-    --['<C-Space>'] = cmp.mapping.complete {},
+    ['<C-Space>'] = cmp.mapping.complete {},
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
@@ -464,11 +465,11 @@ cmp.setup {
     end, { 'i', 's' }),
   },
   sources = {
+    { name = 'buffer' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
   },
 }
-]]
 
 --}}}
 
@@ -555,6 +556,8 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 
 --{{{Use colon instead of semi-colon in normal mode
 vim.keymap.set('n', ';', ':')
+vim.keymap.set('v', ';', ':')
+vim.keymap.set('c', ';', ':')
 --}}}
 
 --}}}
@@ -624,7 +627,7 @@ vim.keymap.set('v', '*', [["vy/\V<C-r>=substitute(escape(@v, '\/'), "\n", '\\n',
 
 
 --{{{Display Settings..
-vim.o.cursorline = true -- Highlight the current line.
+--vim.o.cursorline = true -- Highlight the current line.
 vim.o.showmatch = true  -- Briefly show the matching bracket.
 vim.o.matchtime = 3     -- Show the matching bracket for 3 seconds.
 
