@@ -198,6 +198,7 @@ require('lazy').setup({
 
 --}}}
 
+vim.wo.foldmethod='marker'
 
 --{{{Configs from kickstart.nvim
 -- Make line numbers default
