@@ -1,0 +1,47 @@
+modmap:
+  - name: Global
+    remap:
+      # CapsLock -> Ctrl_L
+      CapsLock: Ctrl_L
+      # Henkan / Muhenkan via SandS (for mozc)
+      Alt_L: [Alt_L, Muhenkan]
+      Alt_R: [Alt_R, Henkan]
+
+keymap:
+  - name: Browsers
+    application:
+      only: [Navigator.firefox]
+    remap:
+      C-s: C-f
+      C-Shift-f: C-g
+      C-Shift-g: C-Shift-g
+
+  - name: Terminal_bindings
+    application:
+      only: [Alacritty.Alacritty, xterm.XTerm]
+    remap:
+      C-w: C-g
+      C-g: C-w
+
+  - name: Emacs-bindings_except_Terminal
+    application:
+      not: [Alacritty.Alacritty, xterm.XTerm]
+    remap:
+      C-j: Enter
+      C-Shift-p: C-Shift-p
+      C-p: up
+      C-n: down
+      C-f: right
+      C-b: left
+      C-h: backspace
+      C-g: C-backspace
+      C-d: delete
+      C-a: home
+      C-e: end
+      C-k: [Shift-end, backspace]
+      # PageUp/Downs..
+      C_R-left: C-PageUp
+      C_R-right: C-PageDown
+      C_R-up: PageUp
+      C_R-down: PageDown
+
