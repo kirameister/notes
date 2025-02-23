@@ -35,10 +35,63 @@ calibre
 ## Configs
 
 ```
-# alacritty
 export HC="$HOME/.config"
+```
+
+### DPI settings (for my display)
+
+```
+echo 'Xft.dpi: 164' > $HOME/.Xresources
+```
+
+### Qtile
+
+```
+cp -r qtile $HC/
+```
+
+### XRemap
+```
+mv xremap.yml $HC/
+```
+
+### Mozc
+```
+mkdir $HC/mozc
+cp config1.db $HC/mozc
+```
+
+### Terminal config
+```
+# alacritty
 mkdir $HC/alacritty
 cp alacritty.toml $HC/alacritty/
 ```
 
+### For alttab , add following lines in `/etc/fonts/fonts.conf`
+```
+<!--
+  Font family that can also render Japanese chars
+-->
+	<match target="pattern">
+		<test qual="any" name="family">
+			<string>juisee</string>
+		</test>
+		<edit name="family" mode="assign" binding="same">
+			<string>JuiseeSZIS-Regular</string>
+		</edit>
+	</match>
+```
+
+### video group (necessary for brightness control)
+
+```
+sudo usermod -a -G video $USER
+sudo chown root:video /sys/class/leds/chromeos:white:power/brightness
+```
+
+### MComix
+```
+cp -r mcomix $HC/
+```
 
