@@ -45,3 +45,13 @@ keymap:
       C_R-up: PageUp
       C_R-down: PageDown
 
+  - name: German_Umlauts
+    remap:
+      C-ALT-a: [C-Shift-u, "e", "4", enter]
+      C-ALT-u: [C-Shift-u, "f", "c", enter]
+      C-ALT-o: [C-Shift-u, "f", "6", enter]
+      C-Shift-ALT-a: [C-Shift-u, "c", "4", enter]
+      C-Shift-ALT-u: [C-Shift-u, "d", "c", enter]
+      C-Shift-ALT-o: [C-Shift-u, "d", "6", enter]
+      C-ALT-s: [C-Shift-u, "d", "f", enter]
+
