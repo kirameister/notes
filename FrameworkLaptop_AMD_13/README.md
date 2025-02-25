@@ -19,6 +19,10 @@
 * unrar
 * calibre
 * audacity
+* conky
+* nitrogen
+* flameshot
+* python-virtualenv
 
 ## AUR
 
@@ -85,7 +89,6 @@ cp alacritty.toml $HC/alacritty/
 ```
 
 ### video group (necessary for brightness control)
-
 ```
 sudo usermod -a -G video $USER
 sudo chown root:video /sys/class/leds/chromeos:white:power/brightness
