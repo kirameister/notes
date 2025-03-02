@@ -10,7 +10,7 @@ modmap:
 keymap:
   - name: Browsers
     application:
-      only: [Navigator.firefox]
+      only: [Navigator.firefox, brave-browser.Brave-browser]
     remap:
       C-s: C-f
       C-Shift-f: C-g
