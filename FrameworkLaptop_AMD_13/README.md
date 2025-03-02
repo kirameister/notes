@@ -34,6 +34,7 @@
 * xorg-server-xephyr
 * nautilus
 * breeze-icons
+* keepassxc
 
 ## AUR
 
@@ -83,7 +84,7 @@ mkdir $HC/mozc
 cp config1.db $HC/mozc
 ```
 
-Run `ibus-setup` and select "mozc(あ)" as only input source. 
+Run `ibus-setup` and select "mozc(あ)" as only input source.
 
 ### Terminal config
 ```
@@ -118,5 +119,16 @@ sudo chown root:video /sys/class/leds/chromeos:white:power/brightness
 ### MComix
 ```
 cp -r mcomix $HC/
+```
+
+### Brave browser
+
+* Open "Settings" => "Contents" and enable "Cycle through the most recently use tabs with Ctrl-Tab".
+* Install [Keyboard Shortcuts](https://chromewebstore.google.com/detail/keyboard-shortcuts/lplcmnhgijkkmflbmhabnccgelffpnog?hl=en-US) extension and set "Ctrl+PageUp" for "Select previous tab" and "Ctrl+PageDown" for "Select next tab".
+* Open "Settings" => "System" => "Shortcuts" and make "Previous tab" empty while keeping only "Ctrl+Tab" for "Next tab"
+
+### Wine
+```
+winetricks jkfonts
 ```
 
