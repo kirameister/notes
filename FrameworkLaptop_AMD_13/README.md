@@ -36,6 +36,23 @@
 * breeze-icons
 * keepassxc
 
+### following packages are only necessary for playing audio in Wine environment
+
+* alsa-firmware
+* alsa-lib
+* alsa-plugins
+* alsa-utils
+* lib32-alsa-lib
+* lib32-alsa-plugins
+* pulseaudio-alsa
+* lib32-libpulse
+* libcanberra-pulse
+* libpulse
+* pulseaudio
+* pulseaudio-alsa
+* lib32-openal
+* openal
+
 ## AUR
 
 * [qtile-extras](https://aur.archlinux.org/packages/qtile-extras)
@@ -143,5 +160,12 @@ cp -r mcomix $HC/
 ### Wine
 ```
 winetricks jkfonts
+winetricks sound=alsa
+```
+
+Following are necessary for properly installing [VMJapan](https://ja.wikipedia.org/wiki/VM_JAPAN) (ancient strategy game from Falcom Japan)
+```
+cd $HOME/.wine/drive_c/users/$USER/
+ln -s AppData "Application Data"
 ```
 
