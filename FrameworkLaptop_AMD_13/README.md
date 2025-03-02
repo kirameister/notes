@@ -4,6 +4,7 @@
 
 ## Pacman packages
 
+* less
 * rsync
 * xev
 * qtile
@@ -43,6 +44,15 @@
 export HC="$HOME/.config"
 ```
 
+### XRemap
+```
+mv xremap.yml $HC/
+sudo gpasswd -a $USER input
+echo 'KERNEL=="uinput", GROUP="input", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/input.rules
+echo "uinput" | sudo tee /etc/modules-load.d/uinput.conf
+echo 'KERNEL=="uinput", GROUP="input", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/99-input.rules
+```
+
 ### DPI settings (for my display)
 
 ```
@@ -53,11 +63,6 @@ echo 'Xft.dpi: 164' > $HOME/.Xresources
 
 ```
 cp -r qtile $HC/
-```
-
-### XRemap
-```
-mv xremap.yml $HC/
 ```
 
 ### Mozc
