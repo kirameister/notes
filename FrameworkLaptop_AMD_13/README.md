@@ -116,6 +116,19 @@ sudo chmod g+w /sys/class/backlight/amdgpu_bl1/brightness
 sudo chown root:video /sys/class/leds/chromeos:white:power/brightness
 ```
 
+### Libinput (trackpad)
+
+Create a file called `/etc/X11/xorg.conf.d/30-touchpad.conf` and add following lines
+```
+Section "InputClass"
+    Identifier "touchpad"
+    Driver "libinput"
+    MatchIsTouchpad "on"
+    Option "Tapping" "on"
+    Option "ClickMethod" "clickfinger"
+EndSection
+```
+
 ### MComix
 ```
 cp -r mcomix $HC/
