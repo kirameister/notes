@@ -26,6 +26,14 @@
 * python-virtualenv
 * xinput
 * libinput
+* acipilight
+* python-dbus-fast
+* alsa-utils
+* python-iwlib
+* upower
+* xorg-server-xephyr
+* nautilus
+* breeze-icons
 
 ## AUR
 
@@ -75,6 +83,8 @@ mkdir $HC/mozc
 cp config1.db $HC/mozc
 ```
 
+Run `ibus-setup` and select "mozc(あ)" as only input source. 
+
 ### Terminal config
 ```
 # alacritty
@@ -100,6 +110,8 @@ cp alacritty.toml $HC/alacritty/
 ### video group (necessary for brightness control)
 ```
 sudo usermod -a -G video $USER
+sudo chgrp video /sys/class/backlight/amdgpu_bl1/brightness
+sudo chmod g+w /sys/class/backlight/amdgpu_bl1/brightness
 sudo chown root:video /sys/class/leds/chromeos:white:power/brightness
 ```
 
