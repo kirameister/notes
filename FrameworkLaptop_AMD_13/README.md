@@ -146,6 +146,13 @@ Section "InputClass"
 EndSection
 ```
 
+### Network
+
+Open `/etc/resolv.conf` and use the following value instead of `.` (of course, replace `HOME_DOMAIN.NAME` with something appropriate)
+```
+search HOME_DOMAIN.NAME
+```
+
 ### MComix
 ```
 cp -r mcomix $HC/
