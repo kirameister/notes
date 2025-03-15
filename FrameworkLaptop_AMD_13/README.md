@@ -32,9 +32,10 @@
 * python-iwlib
 * upower
 * xorg-server-xephyr
-* nautilus
+* thunar
 * breeze-icons
 * keepassxc
+* npm (required by NeoVim package)
 
 ### following packages are only necessary for playing audio in Wine environment
 
