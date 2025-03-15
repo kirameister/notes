@@ -33,9 +33,13 @@
 * upower
 * xorg-server-xephyr
 * thunar
+* zenity (for confirmation dialog within thunar)
 * breeze-icons
 * keepassxc
+* simple-scan
 * npm (required by NeoVim package)
+* python-pytest (for my own project)
+* python-pytest-mock (for my own project)
 
 ### following packages are only necessary for playing audio in Wine environment
 
@@ -158,6 +162,19 @@ search HOME_DOMAIN.NAME
 ```
 cp -r mcomix $HC/
 ```
+
+### Thunar
+
+ Go over the following steps. This is to let the confirmation dialog window to appear when deleting the file (in the original Thunar behavior, files are removed permanently without confirmation).
+
+1. Select "Edit" > "Preference"
+2. In the opened dialog, select "Shortcuts" tab, and empty (remove) "Delete" from both "Move to Trash" and "Delete" under "Launcher" segment. Click "Close" once done. 
+3. Select "Edit" > "Configure custom actions...".
+4. In the opened dialog, click "+" icon, and fill in following values (in "Basic" tab): 
+	* Name: "delete-confirm"
+	* Command: `zenity --question --text="Are you sure you want to delete %N?" && rm -rf %F`
+	* Keyboard Shortcut: "Delete"
+5. In "Appearance Conditions" tab, select all the checkboxes under "Appears if selection contains:". Click "OK" (and then "Close") once this is done. 
 
 ### Brave browser
 
