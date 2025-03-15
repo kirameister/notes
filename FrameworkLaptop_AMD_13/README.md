@@ -101,6 +101,20 @@ echo 'Xft.dpi: 164' > $HOME/.Xresources
 cp -r qtile $HC/
 ```
 
+### vim
+
+Please note that the location of `.vimrc` is directly under the `$HOME`.
+```
+mkdir $HOME/.vim
+cp dot.vimrc $HOME/.vimrc
+```
+
+### NeoVim
+
+```
+cp -r nvim $HC/
+```
+
 ### Mozc
 ```
 mkdir $HC/mozc
