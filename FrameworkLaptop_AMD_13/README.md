@@ -72,6 +72,7 @@
 * [ttf-juisee](https://aur.archlinux.org/packages/ttf-juisee) -- This is the font I'd be using
 * [xremap-x11-bin](https://aur.archlinux.org/packages/xremap-x11-bin)
 * [alttab](https://aur.archlinux.org/packages/alttab)
+* [Brother-printer-driver](https://aur.archlinux.org/brother-hll2350dw)
 
 ## Configs
 
