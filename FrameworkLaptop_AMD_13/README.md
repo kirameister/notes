@@ -37,6 +37,9 @@
 * breeze-icons
 * keepassxc
 * simple-scan
+* catfish
+* feh
+* arandr
 * npm (required by NeoVim package)
 * python-pytest (for my own project)
 * python-pytest-mock (for my own project)
