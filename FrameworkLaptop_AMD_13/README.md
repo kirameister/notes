@@ -12,7 +12,7 @@ Include = /etc/pacman.d/mirrorlist
 ## Pacman packages
 
 * less
-* rsync
+* brightnessctl
 * xev
 * qtile
 * rofi
@@ -97,6 +97,11 @@ sudo gpasswd -a $USER input
 echo 'KERNEL=="uinput", GROUP="input", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/input.rules
 echo "uinput" | sudo tee /etc/modules-load.d/uinput.conf
 echo 'KERNEL=="uinput", GROUP="input", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/99-input.rules
+
+mkdir -p $HC/systemd/user
+mv xremap.service $HC/systemd/user/
+systemctl --user enable xremap.service
+systemctl --user start xremap.service
 ```
 
 ### DPI settings (for my display)
