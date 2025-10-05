@@ -2,6 +2,13 @@
 
 ## Initial installation settings
 
+Update `/etc/pacman.conf` by un-commenting following lines
+
+```
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+
 ## Pacman packages
 
 * less
