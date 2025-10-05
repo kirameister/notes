@@ -14,7 +14,6 @@ Include = /etc/pacman.d/mirrorlist
 * less
 * brightnessctl
 * xev
-* qtile
 * rofi
 * ibus
 * neovim
@@ -40,7 +39,11 @@ Include = /etc/pacman.d/mirrorlist
 * upower
 * xorg-server-xephyr
 * thunar
+* sshfs (necessary for thunar to communicate via ssh)
+* gvfs (necessary for thunar to communicate via ssh)
 * zenity (for confirmation dialog within thunar)
+* vlc
+* vlc-plugins-all
 * breeze-icons
 * keepassxc
 * simple-scan
