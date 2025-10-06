@@ -12,6 +12,7 @@ Include = /etc/pacman.d/mirrorlist
 ## Pacman packages
 
 * less
+* acpi
 * brightnessctl
 * xev
 * rofi
