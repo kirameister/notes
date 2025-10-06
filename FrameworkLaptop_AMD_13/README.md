@@ -138,6 +138,11 @@ cp -r nvim $HC/
 ```
 mkdir $HC/mozc
 cp config1.db $HC/mozc
+
+mkdir -p $HC/systemd/user
+mv ibus_daemon.service $HC/systemd/user/
+systemctl --user enable ibus_daemon.service
+systemctl --user start ibus_daemon.service
 ```
 
 Run `ibus-setup` and select "mozc(あ)" as only input source.
