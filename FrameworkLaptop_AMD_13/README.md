@@ -19,6 +19,7 @@ Include = /etc/pacman.d/mirrorlist
 * ibus
 * neovim
 * virtualbox
+* linux-headers
 * wine
 * winetricks
 * ollama
