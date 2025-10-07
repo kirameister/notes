@@ -4,8 +4,16 @@ modmap:
       # CapsLock -> Ctrl_L
       CapsLock: Ctrl_L
       # Henkan / Muhenkan via SandS (for mozc)
-      Alt_L: [Alt_L, Muhenkan]
-      Alt_R: [Alt_R, Henkan]
+      #Alt_L: [Alt_L, Muhenkan]
+      #Alt_R: [Alt_R, Henkan]
+      Alt_L:
+        held: Alt_L
+        alone: Muhenkan
+        free_hold: true
+      Alt_R:
+        held: Alt_R
+        alone: Henkan
+        free_hold: true
 
 keymap:
   - name: Browsers
@@ -18,14 +26,14 @@ keymap:
 
   - name: Terminal_bindings
     application:
-      only: [Alacritty.Alacritty, xterm.XTerm]
+      only: [Alacritty.Alacritty, xterm.XTerm, org.wezfurlong.wezterm, kitty]
     remap:
       C-w: C-g
       C-g: C-w
 
   - name: Emacs-bindings_except_Terminal
     application:
-      not: [Alacritty.Alacritty, xterm.XTerm]
+      not: [Alacritty.Alacritty, xterm.XTerm, org.wezfurlong.wezterm, kitty, "VirtualBox Machine"]
     remap:
       C-j: Enter
       C-Shift-p: C-Shift-p
