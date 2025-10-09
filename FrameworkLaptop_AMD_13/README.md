@@ -234,3 +234,8 @@ cd $HOME/.wine/drive_c/users/$USER/
 ln -s AppData "Application Data"
 ```
 
+
+### Worldtime
+```
+sudo ./worldtime /usr/local/bin/
+```

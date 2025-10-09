@@ -1,0 +1,16 @@
+#!/bin/sh
+
+echo -n "Japan      "
+TZ="Asia/Tokyo" LC_ALL=C        date +"%Y/%m/%d (%a)    %I:%M %p  --  %H:%M:%S"
+
+echo -n "Germany    "
+TZ="Europe/Berlin" LC_ALL=C     date +"%Y/%m/%d (%a)    %I:%M %p  --  %H:%M:%S"
+
+echo -n "US-East    "
+TZ="US/Eastern" LC_ALL=C        date +"%Y/%m/%d (%a)    %I:%M %p  --  %H:%M:%S"
+echo -n "US-West    "
+TZ="US/Pacific" LC_ALL=C        date +"%Y/%m/%d (%a)    %I:%M %p  --  %H:%M:%S"
+
+echo -n "China      "
+TZ="Asia/Shanghai" LC_ALL=C     date +"%Y/%m/%d (%a)    %I:%M %p  --  %H:%M:%S"
+
