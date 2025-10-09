@@ -239,3 +239,7 @@ ln -s AppData "Application Data"
 ```
 sudo ./worldtime /usr/local/bin/
 ```
+
+### lockscreen (i3lock-fancy)
+
+Follow the steps written on https://gist.github.com/Raymo111/91ffd256b7aca6a85e8a99d6331d3b7b
