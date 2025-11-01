@@ -11,6 +11,7 @@ Include = /etc/pacman.d/mirrorlist
 
 ## Pacman packages
 
+* awesome
 * less
 * acpi
 * brightnessctl
@@ -75,7 +76,6 @@ Include = /etc/pacman.d/mirrorlist
 
 ## AUR
 
-* [qtile-extras](https://aur.archlinux.org/packages/qtile-extras)
 * [teams](https://aur.archlinux.org/packages/teams)
 * [brave-bin](https://aur.archlinux.org/packages/brave-bin)
 * [i3lock-color](https://aur.archlinux.org/packages/i3lock-color)
@@ -88,6 +88,7 @@ Include = /etc/pacman.d/mirrorlist
 * [xremap-x11-bin](https://aur.archlinux.org/packages/xremap-x11-bin)
 * [auto-cpufreq](https://aur.archlinux.org/packages/auto-cpufreq)
 * [Brother-printer-driver](https://aur.archlinux.org/packages/brother-hll2350dw)
+* [fw-ectool-git](https://aur.archlinux.org/packages/fw-ectool-git)
 
 ## Configs
 
@@ -113,12 +114,6 @@ systemctl --user start xremap.service
 
 ```
 echo 'Xft.dpi: 164' > $HOME/.Xresources
-```
-
-### Qtile
-
-```
-cp -r qtile $HC/
 ```
 
 ### vim
