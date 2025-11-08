@@ -238,3 +238,26 @@ sudo ./worldtime /usr/local/bin/
 ### lockscreen (i3lock-fancy)
 
 Follow the steps written on https://gist.github.com/Raymo111/91ffd256b7aca6a85e8a99d6331d3b7b
+
+
+### LED light turn off
+
+In order to turn off the power-button LED, do the following:
+
+1. create `/usr/lib/systemd/system/led_power_off.service` (with `sudo`) with following contents: 
+```
+[Unit]
+Description=turn off the touch-LED light
+After=network.target
+After=local-fs.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=fw-ectool led power off
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
+```
+2. run following: `sudo systemctl enable led_power_off.service`
