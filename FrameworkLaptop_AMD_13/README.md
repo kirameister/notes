@@ -229,6 +229,27 @@ cd $HOME/.wine/drive_c/users/$USER/
 ln -s AppData "Application Data"
 ```
 
+### Auto-mount ISOs
+
+In order to play VMJ more easily..
+
+1. place ISO files under `/usr/local/`
+2. Create following directories (with `sudo`: 
+2.1. `/DVD/VMJ`
+2.2. `/DVD/VMJ_Ext`
+3. Update `/etc/fstab` by adding the following lines:
+```
+/usr/local/VMJ_D.iso	/DVD/VMJ	iso9660	loop,ro,auto,nofail	0	0
+/usr/local/VMJP_C.iso	/DVD/VMJ_Ext	iso9660	loop,ro,auto,nofail	0	0
+```
+
+You can add following lines in the `$HOME/.zshrc`:
+
+```
+alias vmj='wine /DVD/VMJ/FSetup3.exe'
+alias vmj_ext='wine /DVD/VMJ_Ext/FSetup3.exe'
+```
+
 
 ### Worldtime
 ```
@@ -261,3 +282,4 @@ RemainAfterExit=true
 WantedBy=multi-user.target
 ```
 2. run following: `sudo systemctl enable led_power_off.service`
+
