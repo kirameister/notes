@@ -40,7 +40,8 @@ require('lazy').setup({
     { -- Local Ollama
       "David-Kunz/gen.nvim" ,
       opts = {
-        model = "llama3.2",
+        -- model = "llama3.2",
+        model = "qwen2.5-coder:7b",
         quit_map = "q", -- set keymap to close the response window
         host = "localhost", -- The host running the Ollama service.
         port = "11434", -- The port on which the Ollama service is listening.
@@ -281,9 +282,16 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- Ollama kick
 vim.keymap.set({ 'n', 'v' }, '<leader>g', ':Gen<CR>')
 vim.keymap.set({ 'n', 'v' }, '<leader>e', ':Gen Enhance_Code<CR>')
+require('gen').prompts['Docstring'] = {
+  prompt = "Given the following function, add or update the docstring comment: \n$text\n\nOnly output the result in format ```$filetype\n...\n```:\n```$filetype\n``` and do not update the actual code of the function including the indent. Again, never change the indent",
+  replace = true,
+  extract = "```$filetype\n(.-)```"
+}
 
 -- file explorer
 --require("nvim-tree").setup()
+
+--require("ibl").setup()
 
 
 -- [[ Configure Treesitter ]]
