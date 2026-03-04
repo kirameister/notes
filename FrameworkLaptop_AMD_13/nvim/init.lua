@@ -360,6 +360,25 @@ require('nvim-treesitter.configs').setup {
   },
 }
 
+
+-- Diagnostic settings
+-- Configure how diagnostics are displayed
+vim.diagnostic.config({
+  virtual_text = {
+    spacing = 4,
+    prefix = '■',
+  },
+  underline = true,
+  signs = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
+-- Diagnostic keymaps
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
+vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
